@@ -1,4 +1,13 @@
 //your code here
-let wordcount =document.getElementById("evaluatedText").value;
-let count = wordcount.length;
-let countword = document.getElementById("letterCount").innerHTML=count;
+"use strict";
+
+const input = document.getElementById("evaluatedText");
+const counter = document.getElementById("letterCount");
+
+input.addEventListener("keyup", getLength);
+
+function getLength() {
+  const value = (input.value || "").length;
+  counter.textContent = value;
+}
+getLength();
